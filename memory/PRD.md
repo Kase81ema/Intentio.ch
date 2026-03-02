@@ -10,22 +10,24 @@ One-page corporate website in Italian for Intentio Nova sagl (brand: Intentio, p
 - **Colors**: Violet #6D28D9 (primary), Blue #1E40AF (secondary), Dark #1E1B4B (impact section)
 
 ## What's Been Implemented (Dec 2025)
-- Sticky header with anchor navigation + CTA
-- Hero section with animated network canvas background (dots/nodes)
-- Human-AImpact badge
-- Trust/logos section (5 placeholder logos)
-- Services section (3 cards: formazione, coaching, assessment)
-- Typical situations section (6 pills)
-- Human-AImpact dark section with 3 feature cards
-- 4-step method timeline with output sidebar
-- Partner ecosystem (Kitsap + Ariadne with external links)
-- Observable results section (4 cards)
-- Full contact form (nome, azienda, ruolo, email, telefono, area_interesse dropdown, obiettivo, tempistiche dropdown, privacy consent)
-- Form submission saves to MongoDB + sends email via Brevo (admin notification + user confirmation)
-- Server-side privacy consent validation
+### V2 - Complete Redesign (BearingPoint-inspired)
+- Full-screen hero with professional image overlay + dark gradient
+- Header transparent-to-white scroll behavior with logo inversion
+- 3 narrative service pillars: Team Connection, Team Evolution, Teaming with AI (alternating image/text split layouts)
+- Situations section (6 elegant cards)
+- Human-AImpact immersive dark section
+- 4-step method timeline
+- Chi Siamo section with 3 team profile placeholders
+- Partner ecosystem (Kitsap + Ariadne)
+- Observable results with numbered cards
+- CTA band "Tutto inizia da una conversazione"
+- Contact form split layout (intro left, form right)
+- Trust logos moved to bottom above footer
 - Footer with full company details
+- Brevo email integration (admin + user confirmation)
+- Server-side privacy consent validation
 - Mobile responsive design
-- Smooth scroll navigation
+- Anchor navigation
 
 ## Core Requirements (Static)
 - Italian language throughout
