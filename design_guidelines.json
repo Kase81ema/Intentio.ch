@@ -1,0 +1,119 @@
+{
+  "project_name": "Intentio Nova Website",
+  "design_philosophy": {
+    "theme": "Swiss Corporate & Human-AI Synergy",
+    "keywords": ["Evolution", "Awareness", "Connection", "Precision", "Human-Centric"],
+    "visual_style": "Minimalist, High-Contrast, Geometric, Network-based",
+    "emotional_tone": "Professional, Trustworthy, Innovative, Calm"
+  },
+  "typography": {
+    "font_family_headings": "Outfit, sans-serif",
+    "font_family_body": "Inter, sans-serif",
+    "scale": {
+      "h1": "text-5xl md:text-7xl font-bold tracking-tight",
+      "h2": "text-3xl md:text-5xl font-semibold tracking-tight",
+      "h3": "text-2xl md:text-3xl font-medium",
+      "body": "text-base md:text-lg leading-relaxed text-slate-600",
+      "small": "text-sm font-medium tracking-wide uppercase text-slate-500"
+    }
+  },
+  "colors": {
+    "primary": "#6D28D9",
+    "secondary": "#1E40AF",
+    "accent": "#4F46E5",
+    "background": "#F8FAFC",
+    "surface": "#FFFFFF",
+    "text_main": "#0F172A",
+    "text_muted": "#475569",
+    "border": "#E2E8F0",
+    "human_ai_section_bg": "#1E1B4B",
+    "human_ai_section_text": "#F8FAFC"
+  },
+  "layout": {
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "grid_system": "grid grid-cols-1 md:grid-cols-12 gap-8",
+    "section_spacing": "py-20 md:py-32",
+    "border_radius": "rounded-none md:rounded-lg"
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-primary text-white hover:bg-primary/90 rounded-md px-8 py-3 text-sm font-medium transition-all shadow-lg hover:shadow-primary/25",
+      "secondary": "bg-white text-primary border border-primary/20 hover:bg-primary/5 rounded-md px-8 py-3 text-sm font-medium transition-all",
+      "ghost": "text-slate-600 hover:text-primary hover:bg-slate-100 rounded-md px-4 py-2 transition-all"
+    },
+    "cards": {
+      "service": "bg-white border border-slate-100 hover:border-primary/20 p-8 shadow-sm hover:shadow-md transition-all duration-300 group",
+      "feature": "bg-slate-50 p-6 rounded-lg border border-transparent hover:border-slate-200 transition-all",
+      "result": "bg-white border-l-4 border-primary p-6 shadow-sm"
+    },
+    "inputs": {
+      "default": "flex h-12 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-slate-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+    }
+  },
+  "sections": {
+    "header": {
+      "style": "sticky top-0 z-50 w-full border-b border-slate-200 bg-white/80 backdrop-blur-xl supports-[backdrop-filter]:bg-white/60",
+      "nav_link": "text-sm font-medium text-slate-700 hover:text-primary transition-colors"
+    },
+    "hero": {
+      "layout": "split",
+      "content_align": "left",
+      "visual": "Abstract interactive network canvas (nodes and lines)"
+    },
+    "trust_logos": {
+      "style": "grayscale opacity-50 hover:opacity-100 transition-opacity duration-300"
+    },
+    "human_ai_impact": {
+      "bg_color": "bg-[#1E1B4B]",
+      "text_color": "text-white",
+      "visual": "Dark network overlay",
+      "highlight": "Use a glowing effect or gradient text for key terms"
+    },
+    "timeline": {
+      "type": "vertical",
+      "connector": "border-l-2 border-slate-200 ml-4",
+      "node": "w-8 h-8 rounded-full bg-white border-4 border-primary z-10 relative"
+    }
+  },
+  "assets": {
+    "images": [
+      {
+        "category": "texture_overlay_human_ai",
+        "url": "https://images.unsplash.com/photo-1750969185331-e03829f72c7d",
+        "description": "Abstract blue lines and dots on black background. Use as background for 'Human-AImpact' section with opacity-20."
+      },
+      {
+        "category": "texture_overlay_light",
+        "url": "https://images.unsplash.com/photo-1565300667535-9b6094e1a2a7",
+        "description": "Subtle white wall texture. Use as overlay for 'Trust' or 'Testimonials' section with opacity-10 mix-blend-multiply."
+      }
+    ],
+    "icons": {
+      "library": "lucide-react",
+      "preferred_icons": ["Network", "Users", "BrainCircuit", "Zap", "Target", "TrendingUp", "ShieldCheck", "ArrowRight"]
+    }
+  },
+  "motion": {
+    "library": "framer-motion",
+    "default_transition": { "duration": 0.5, "ease": "easeOut" },
+    "scroll_reveal": "initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}",
+    "hover_lift": "whileHover={{ y: -5 }}",
+    "stagger_children": 0.1
+  },
+  "instructions_to_main_agent": [
+    "Install dependencies: `npm install lucide-react framer-motion clsx tailwind-merge`",
+    "Create a 'NetworkBackground' component using HTML Canvas or SVG that draws nodes and connecting lines. It should be interactive (mouse move affects nodes). Use this in the Hero section.",
+    "For the 'Partner Ecosystem' (Kitsap & Ariadne), since no logos are available, create a stylish text-based logo component using a Serif font (e.g., Playfair Display) to contrast with the main Sans-Serif.",
+    "Ensure the 'Contact Form' maps to the fields: Name, Company, Role, Email, Phone, Area of Interest (Dropdown), Objective, Timeline, Privacy Consent.",
+    "The 'Human-AImpact' section MUST be dark (Deep Violet/Indigo background) to contrast with the rest of the light-themed site.",
+    "Use 'Outfit' font for all Headings (H1-H6) and 'Inter' for body text. Import them via Google Fonts in `index.css`.",
+    "Navigation anchors: #services, #method, #impact, #results, #contact."
+  ],
+  "universal_guidelines": [
+    "Do not use gradients for backgrounds unless specified (Human-AImpact section).",
+    "Use 2-3x more spacing (padding) than typical.",
+    "Ensure all interactive elements have hover states.",
+    "Responsive design is critical - check mobile view for stacking order.",
+    "Accessibility: Ensure text contrast ratios are met, especially on the dark section."
+  ]
+}
