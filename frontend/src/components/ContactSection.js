@@ -17,8 +17,8 @@ import { ArrowRight, Send, Phone, Mail, MapPin, ExternalLink } from "lucide-reac
 import axios from "axios";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
-const LOGO_URL =
-  "https://customer-assets.emergentagent.com/job_people-leadership/artifacts/qrr52jf8_Intentio%20logo%20%28800%20x%20300%20px%29%281%29.png";
+const LOGO_DARK =
+  "https://customer-assets.emergentagent.com/job_people-leadership/artifacts/sgzpl4ho_Intentio%20logo%20%28800%20x%20300%20px%29%283%29.png";
 
 const areeInteresse = ["Formazione", "Coaching", "Team coaching", "Assessment", "Human-AImpact", "Altro"];
 const opzioniTempistiche = ["Entro 1 mese", "Entro 3 mesi", "Entro 6 mesi", "Da valutare"];
@@ -193,7 +193,7 @@ export default function ContactSection() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
             <div className="md:col-span-2">
-              <img src={LOGO_URL} alt="Intentio" className="h-12 mb-5 brightness-0 invert opacity-80" />
+              <img src={LOGO_DARK} alt="Intentio" className="h-12 mb-5" />
               <p className="text-sm text-slate-500 leading-relaxed max-w-sm">
                 Evoluzione consapevole di persone, leadership e team.
                 Società svizzera di consulenza organizzativa.

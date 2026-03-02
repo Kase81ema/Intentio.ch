@@ -39,8 +39,8 @@ const results = [
 const logos = [
   { name: "Camera di Commercio Italiana per la Svizzera", abbr: "CCIS", img: "https://customer-assets.emergentagent.com/job_people-leadership/artifacts/q8voeh8d_logo-ccis.jpg" },
   { name: "HR Ticino", abbr: "HRT", img: "https://customer-assets.emergentagent.com/job_people-leadership/artifacts/fb6nnwas_logo-hrticino.png" },
-  { name: "International Coaching Federation", abbr: "ICF", img: null },
-  { name: "European Mentoring & Coaching Council", abbr: "EMCC", img: null },
+  { name: "International Coaching Federation", abbr: "ICF", img: "https://customer-assets.emergentagent.com/job_people-leadership/artifacts/r3kqfkys_logo%20ICF.png" },
+  { name: "European Mentoring & Coaching Council", abbr: "EMCC", img: "https://customer-assets.emergentagent.com/job_people-leadership/artifacts/2mkglfjz_emcc-global-1024x576.webp" },
   { name: "Employer Branding Awards", abbr: "EBA", img: null },
 ];
 

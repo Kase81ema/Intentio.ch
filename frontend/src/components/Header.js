@@ -5,6 +5,12 @@ import { Menu, X } from "lucide-react";
 const LOGO_URL =
   "https://customer-assets.emergentagent.com/job_people-leadership/artifacts/qrr52jf8_Intentio%20logo%20%28800%20x%20300%20px%29%281%29.png";
 
+const LOGO_LIGHT =
+  "https://customer-assets.emergentagent.com/job_people-leadership/artifacts/1etgm0zr_Intentio%20logo%20%28800%20x%20300%20px%29%282%29.png";
+
+const LOGO_DARK =
+  "https://customer-assets.emergentagent.com/job_people-leadership/artifacts/sgzpl4ho_Intentio%20logo%20%28800%20x%20300%20px%29%283%29.png";
+
 const navLinks = [
   { label: "Servizi", href: "#servizi" },
   { label: "Human-AImpact", href: "#impact" },
@@ -36,11 +42,9 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           <a href="#" className="flex-shrink-0" data-testid="header-logo">
             <img
-              src={LOGO_URL}
+              src={scrolled ? LOGO_LIGHT : LOGO_DARK}
               alt="Intentio"
-              className={`h-12 md:h-16 w-auto transition-all duration-500 ${
-                scrolled ? "" : "brightness-0 invert"
-              }`}
+              className="h-12 md:h-16 w-auto transition-all duration-500"
             />
           </a>
 

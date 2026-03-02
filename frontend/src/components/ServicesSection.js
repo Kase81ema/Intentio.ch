@@ -8,7 +8,7 @@ const services = [
     title: "Team Connection",
     lead: "Rendiamo più solide e misurabili le iniziative che impattano su attrazione, crescita e benessere delle persone nel team.",
     body: "Attraverso la progettazione strategica di iniziative di People management rigeneriamo relazioni sane e connessioni che accelerano la produttività.",
-    image: "https://images.unsplash.com/photo-1622675363311-3e1904dc1885?w=800&h=600&fit=crop&crop=center&q=80",
+    image: "https://images.unsplash.com/photo-1573167507387-6b4b98cb7c13?w=800&h=600&fit=crop&crop=center&q=80",
     reverse: false,
   },
   {

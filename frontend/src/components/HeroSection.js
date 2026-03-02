@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronDown } from "lucide-react";
 
-const HERO_IMG = "https://customer-assets.emergentagent.com/job_people-leadership/artifacts/ns4bgxbj_header.jpg";
+const HERO_IMG = "https://customer-assets.emergentagent.com/job_people-leadership/artifacts/bl3vbo3w_gpt-image-1.5_specchia_l_immagine_in_modo_che_il_logo_sia_sulla_destra._Rendi_pi%C3%B9_simili_ai_s-0.jpg";
 
 export default function HeroSection() {
   return (
