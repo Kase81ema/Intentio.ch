@@ -64,7 +64,7 @@ function ServiceBlock({ service, index }) {
           reverse ? "lg:order-1" : ""
         }`}
       >
-        <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-violet-600 mb-5">
+        <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-indigo-600 mb-5">
           {tag}
         </span>
         <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 tracking-tight mb-6">
@@ -79,7 +79,7 @@ function ServiceBlock({ service, index }) {
         <a href="#contatti" className="inline-block">
           <Button
             variant="ghost"
-            className="text-violet-700 hover:text-violet-800 hover:bg-violet-50 p-0 h-auto text-sm font-medium tracking-wide uppercase"
+            className="text-indigo-700 hover:text-indigo-800 hover:bg-indigo-50 p-0 h-auto text-sm font-medium tracking-wide uppercase"
             data-testid={`service-cta-${index}`}
           >
             Richiedi un contatto <ArrowRight className="ml-2 h-3.5 w-3.5" />
@@ -101,7 +101,7 @@ export default function ServicesSection() {
           viewport={{ once: true }}
           className="max-w-3xl"
         >
-          <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-violet-600 mb-5 block">
+          <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-indigo-600 mb-5 block">
             Cosa facciamo
           </span>
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-slate-900 leading-[1.05]">

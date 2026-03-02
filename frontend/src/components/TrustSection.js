@@ -38,8 +38,8 @@ export default function TrustSection() {
               className="flex flex-col items-center gap-2 group cursor-default"
               data-testid={`trust-logo-${logo.abbr.toLowerCase()}`}
             >
-              <div className="w-20 h-20 md:w-24 md:h-24 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center opacity-50 group-hover:opacity-100 group-hover:border-violet-200 transition-all duration-300">
-                <span className="text-lg md:text-xl font-bold text-slate-400 group-hover:text-violet-600 transition-colors">
+              <div className="w-20 h-20 md:w-24 md:h-24 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center opacity-50 group-hover:opacity-100 group-hover:border-indigo-200 transition-all duration-300">
+                <span className="text-lg md:text-xl font-bold text-slate-400 group-hover:text-indigo-600 transition-colors">
                   {logo.abbr}
                 </span>
               </div>

@@ -35,8 +35,8 @@
 /* Scrollbar */
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: #c4b5fd; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #8b5cf6; }
+::-webkit-scrollbar-thumb { background: #a5b4fc; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #6366f1; }
 
 /* Image zoom on hover */
 .img-zoom {
@@ -51,7 +51,7 @@
 
 /* Gradient text */
 .gradient-text {
-    background: linear-gradient(135deg, #7c3aed 0%, #3b82f6 100%);
+    background: linear-gradient(135deg, #4338CA 0%, #3b82f6 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -63,7 +63,7 @@
     display: block;
     width: 48px;
     height: 3px;
-    background: linear-gradient(90deg, #7c3aed, #6366f1);
+    background: linear-gradient(90deg, #4338CA, #6366f1);
     margin-bottom: 24px;
     border-radius: 2px;
 }

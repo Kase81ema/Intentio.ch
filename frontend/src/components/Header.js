@@ -38,7 +38,7 @@ export default function Header() {
             <img
               src={LOGO_URL}
               alt="Intentio"
-              className={`h-10 w-auto transition-all duration-500 ${
+              className={`h-12 md:h-16 w-auto transition-all duration-500 ${
                 scrolled ? "" : "brightness-0 invert"
               }`}
             />
@@ -51,7 +51,7 @@ export default function Header() {
                 href={link.href}
                 className={`text-[13px] font-medium tracking-wide uppercase transition-colors ${
                   scrolled
-                    ? "text-slate-700 hover:text-violet-700"
+                    ? "text-slate-700 hover:text-indigo-700"
                     : "text-white/80 hover:text-white"
                 }`}
                 data-testid={`nav-${link.href.replace("#", "")}`}
@@ -67,7 +67,7 @@ export default function Header() {
                 data-testid="header-cta-btn"
                 className={`hidden lg:inline-flex rounded-none px-7 py-2.5 text-[13px] font-medium tracking-wide uppercase transition-all ${
                   scrolled
-                    ? "bg-violet-700 hover:bg-violet-800 text-white"
+                    ? "bg-indigo-700 hover:bg-indigo-800 text-white"
                     : "bg-white text-slate-900 hover:bg-white/90"
                 }`}
               >
@@ -92,14 +92,14 @@ export default function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                className="block py-3.5 text-sm font-medium text-slate-800 hover:text-violet-700 border-b border-slate-100 last:border-0"
+                className="block py-3.5 text-sm font-medium text-slate-800 hover:text-indigo-700 border-b border-slate-100 last:border-0"
                 onClick={() => setOpen(false)}
               >
                 {link.label}
               </a>
             ))}
             <a href="#contatti" onClick={() => setOpen(false)}>
-              <Button className="w-full mt-5 bg-violet-700 hover:bg-violet-800 text-white rounded-none py-3" data-testid="mobile-cta-btn">
+              <Button className="w-full mt-5 bg-indigo-700 hover:bg-indigo-800 text-white rounded-none py-3" data-testid="mobile-cta-btn">
                 Richiedi un contatto
               </Button>
             </a>

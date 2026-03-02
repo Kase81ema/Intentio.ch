@@ -37,11 +37,11 @@ const results = [
 ];
 
 const logos = [
-  { name: "Camera di Commercio Italiana per la Svizzera", abbr: "CCIS" },
-  { name: "HR Ticino", abbr: "HRT" },
-  { name: "International Coaching Federation", abbr: "ICF" },
-  { name: "European Mentoring & Coaching Council", abbr: "EMCC" },
-  { name: "Employer Branding Awards", abbr: "EBA" },
+  { name: "Camera di Commercio Italiana per la Svizzera", abbr: "CCIS", img: "https://customer-assets.emergentagent.com/job_people-leadership/artifacts/q8voeh8d_logo-ccis.jpg" },
+  { name: "HR Ticino", abbr: "HRT", img: "https://customer-assets.emergentagent.com/job_people-leadership/artifacts/fb6nnwas_logo-hrticino.png" },
+  { name: "International Coaching Federation", abbr: "ICF", img: null },
+  { name: "European Mentoring & Coaching Council", abbr: "EMCC", img: null },
+  { name: "Employer Branding Awards", abbr: "EBA", img: null },
 ];
 
 export default function MethodSection() {
@@ -57,7 +57,7 @@ export default function MethodSection() {
               viewport={{ once: true }}
               className="lg:col-span-5"
             >
-              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-violet-600 mb-5 block">
+              <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-indigo-600 mb-5 block">
                 Approccio
               </span>
               <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900 leading-tight">
@@ -65,7 +65,7 @@ export default function MethodSection() {
                 <br />misurabile,
                 <br />replicabile
               </h2>
-              <div className="w-12 h-[3px] bg-gradient-to-r from-violet-600 to-indigo-600 mt-6 mb-10 rounded-full" />
+              <div className="w-12 h-[3px] bg-gradient-to-r from-indigo-600 to-indigo-600 mt-6 mb-10 rounded-full" />
 
               <div className="bg-slate-50 border border-slate-200/80 p-6">
                 <p className="text-[10px] font-medium tracking-[0.2em] uppercase text-slate-400 mb-4">
@@ -74,7 +74,7 @@ export default function MethodSection() {
                 <div className="space-y-3">
                   {["Roadmap 30-60-90 giorni", "Toolkit operativo", "Check-in periodici"].map((o, i) => (
                     <div key={i} className="flex items-center gap-3 text-sm text-slate-700">
-                      <span className="w-1.5 h-1.5 rounded-full bg-violet-500" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-indigo-500" />
                       {o}
                     </div>
                   ))}
@@ -94,10 +94,10 @@ export default function MethodSection() {
                     className="relative pl-12 pb-14 last:pb-0"
                     data-testid={`method-step-${i}`}
                   >
-                    <div className="absolute left-0 top-0 -translate-x-1/2 w-10 h-10 rounded-full bg-white border-[3px] border-violet-600 flex items-center justify-center shadow-sm">
-                      <step.icon className="h-4 w-4 text-violet-700" />
+                    <div className="absolute left-0 top-0 -translate-x-1/2 w-10 h-10 rounded-full bg-white border-[3px] border-indigo-600 flex items-center justify-center shadow-sm">
+                      <step.icon className="h-4 w-4 text-indigo-700" />
                     </div>
-                    <span className="text-[11px] font-mono text-violet-600 tracking-wider">{step.num}</span>
+                    <span className="text-[11px] font-mono text-indigo-600 tracking-wider">{step.num}</span>
                     <h3 className="text-xl md:text-2xl font-bold text-slate-900 mt-1">{step.title}</h3>
                     <p className="text-sm text-slate-500 mt-2">{step.desc}</p>
                   </motion.div>
@@ -122,7 +122,7 @@ export default function MethodSection() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-violet-600 mb-5 block">
+            <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-indigo-600 mb-5 block">
               Il team
             </span>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900">
@@ -142,20 +142,20 @@ export default function MethodSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white border border-slate-200/80 hover:border-violet-300/50 hover:shadow-lg transition-all duration-400 group"
+                className="bg-white border border-slate-200/80 hover:border-indigo-300/50 hover:shadow-lg transition-all duration-400 group"
                 data-testid={`team-member-${i}`}
               >
                 {/* Photo placeholder */}
                 <div className="aspect-[4/3] bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center overflow-hidden">
-                  <div className="w-24 h-24 rounded-full bg-white/80 border-2 border-slate-300 flex items-center justify-center group-hover:border-violet-400 transition-colors">
-                    <span className="text-2xl font-bold text-slate-400 group-hover:text-violet-600 transition-colors">
+                  <div className="w-24 h-24 rounded-full bg-white/80 border-2 border-slate-300 flex items-center justify-center group-hover:border-indigo-400 transition-colors">
+                    <span className="text-2xl font-bold text-slate-400 group-hover:text-indigo-600 transition-colors">
                       {member.initials}
                     </span>
                   </div>
                 </div>
                 <div className="p-6 lg:p-8">
                   <h3 className="text-lg font-bold text-slate-900">{member.name}</h3>
-                  <p className="text-[11px] font-medium tracking-[0.15em] uppercase text-violet-600 mt-1 mb-4">
+                  <p className="text-[11px] font-medium tracking-[0.15em] uppercase text-indigo-600 mt-1 mb-4">
                     {member.role}
                   </p>
                   <p className="text-sm text-slate-500 leading-relaxed">{member.bio}</p>
@@ -175,7 +175,7 @@ export default function MethodSection() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-violet-600 mb-5 block">
+            <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-indigo-600 mb-5 block">
               Ecosistema
             </span>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900">
@@ -191,12 +191,15 @@ export default function MethodSection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="border border-slate-200/80 p-8 lg:p-10 hover:border-violet-300/50 hover:shadow-lg transition-all duration-400"
+              className="border border-slate-200/80 p-8 lg:p-10 hover:border-indigo-300/50 hover:shadow-lg transition-all duration-400"
               data-testid="partner-kitsap"
             >
-              <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Kitsap
-              </h3>
+              <div className="flex items-center gap-4 mb-4">
+                <img src="https://customer-assets.emergentagent.com/job_people-leadership/artifacts/2iho6wo9_kitsap_black.svg" alt="Kitsap" className="h-8" />
+                <h3 className="text-2xl md:text-3xl font-bold text-slate-900" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  Kitsap
+                </h3>
+              </div>
               <p className="text-sm text-slate-500 leading-relaxed mb-6">
                 Valutazioni e percorsi basati sul modello FACED e possibilità di certificazioni People Loving Company®.
               </p>
@@ -204,7 +207,7 @@ export default function MethodSection() {
                 href="https://kit-sap.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-medium text-violet-700 hover:text-violet-800 tracking-wide uppercase transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-medium text-indigo-700 hover:text-indigo-800 tracking-wide uppercase transition-colors"
                 data-testid="kitsap-link"
               >
                 Visita il sito <ExternalLink className="h-3.5 w-3.5" />
@@ -216,12 +219,15 @@ export default function MethodSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="border border-slate-200/80 p-8 lg:p-10 hover:border-violet-300/50 hover:shadow-lg transition-all duration-400"
+              className="border border-slate-200/80 p-8 lg:p-10 hover:border-indigo-300/50 hover:shadow-lg transition-all duration-400"
               data-testid="partner-ariadne"
             >
-              <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Ariadne
-              </h3>
+              <div className="flex items-center gap-4 mb-4">
+                <img src="https://customer-assets.emergentagent.com/job_people-leadership/artifacts/r23349yc_Ariadne_Logo_20grande_edited.avif" alt="Ariadne" className="h-8" />
+                <h3 className="text-2xl md:text-3xl font-bold text-slate-900" style={{ fontFamily: "'Playfair Display', serif" }}>
+                  Ariadne
+                </h3>
+              </div>
               <p className="text-sm text-slate-500 leading-relaxed mb-6">
                 Percorsi strutturati di formazione per coach professionisti e programmi esperienziali per aziende,
                 in coerenza con standard di riferimento.
@@ -230,7 +236,7 @@ export default function MethodSection() {
                 href="https://www.ariadne.training"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-medium text-violet-700 hover:text-violet-800 tracking-wide uppercase transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-medium text-indigo-700 hover:text-indigo-800 tracking-wide uppercase transition-colors"
                 data-testid="ariadne-link"
               >
                 Visita il sito <ExternalLink className="h-3.5 w-3.5" />
@@ -249,7 +255,7 @@ export default function MethodSection() {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-violet-600 mb-5 block">
+            <span className="text-[11px] font-medium tracking-[0.2em] uppercase text-indigo-600 mb-5 block">
               Impatto
             </span>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900">
@@ -265,11 +271,11 @@ export default function MethodSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08 }}
-                className="bg-white border-l-[3px] border-violet-600 p-6 md:p-8 hover:shadow-md transition-shadow duration-300"
+                className="bg-white border-l-[3px] border-indigo-600 p-6 md:p-8 hover:shadow-md transition-shadow duration-300"
                 data-testid={`result-card-${i}`}
               >
                 <div className="flex items-start gap-4">
-                  <span className="text-4xl font-bold text-violet-200 leading-none">{String(i + 1).padStart(2, '0')}</span>
+                  <span className="text-4xl font-bold text-indigo-200 leading-none">{String(i + 1).padStart(2, '0')}</span>
                   <p className="text-sm md:text-base text-slate-700 font-medium pt-1">{r}</p>
                 </div>
               </motion.div>
@@ -302,8 +308,12 @@ export default function MethodSection() {
                 className="flex flex-col items-center gap-2 group cursor-default"
                 data-testid={`trust-logo-${logo.abbr.toLowerCase()}`}
               >
-                <div className="w-16 h-16 md:w-20 md:h-20 bg-slate-100 border border-slate-200 flex items-center justify-center opacity-40 group-hover:opacity-80 transition-opacity duration-300">
-                  <span className="text-sm md:text-base font-bold text-slate-500">{logo.abbr}</span>
+                <div className="w-28 h-16 md:w-36 md:h-20 bg-white border border-slate-200 flex items-center justify-center opacity-60 group-hover:opacity-100 transition-opacity duration-300 overflow-hidden p-3">
+                  {logo.img ? (
+                    <img src={logo.img} alt={logo.name} className="max-w-full max-h-full object-contain" />
+                  ) : (
+                    <span className="text-sm md:text-base font-bold text-slate-500">{logo.abbr}</span>
+                  )}
                 </div>
                 <span className="text-[9px] text-slate-400 text-center max-w-[100px] leading-tight">
                   {logo.name}

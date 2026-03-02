@@ -39,9 +39,9 @@ export default function ImpactSection() {
           >
             <div
               data-testid="impact-badge"
-              className="inline-flex items-center gap-2.5 px-4 py-2 bg-violet-500/10 border border-violet-400/15 rounded-sm text-[11px] font-medium tracking-[0.2em] uppercase text-violet-300 mb-8"
+              className="inline-flex items-center gap-2.5 px-4 py-2 bg-indigo-500/10 border border-indigo-400/15 rounded-sm text-[11px] font-medium tracking-[0.2em] uppercase text-indigo-300 mb-8"
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-violet-400 animate-pulse" />
+              <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse" />
               Programma
             </div>
 
@@ -78,14 +78,14 @@ export default function ImpactSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.12 }}
-                className="flex items-start gap-5 p-6 bg-white/[0.03] border border-white/[0.06] hover:bg-white/[0.06] hover:border-violet-400/20 transition-all duration-400"
+                className="flex items-start gap-5 p-6 bg-white/[0.03] border border-white/[0.06] hover:bg-white/[0.06] hover:border-indigo-400/20 transition-all duration-400"
                 data-testid={`impact-feature-${i}`}
               >
-                <div className="w-11 h-11 rounded-sm bg-violet-500/10 flex items-center justify-center flex-shrink-0 border border-violet-400/10">
-                  <f.icon className="h-5 w-5 text-violet-400" />
+                <div className="w-11 h-11 rounded-sm bg-indigo-500/10 flex items-center justify-center flex-shrink-0 border border-indigo-400/10">
+                  <f.icon className="h-5 w-5 text-indigo-400" />
                 </div>
                 <div>
-                  <p className="text-[10px] text-violet-400/70 tracking-[0.2em] uppercase mb-1">{f.label}</p>
+                  <p className="text-[10px] text-indigo-400/70 tracking-[0.2em] uppercase mb-1">{f.label}</p>
                   <p className="text-sm text-white/80 font-medium">{f.text}</p>
                 </div>
               </motion.div>

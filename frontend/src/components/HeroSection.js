@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronDown } from "lucide-react";
 
-const HERO_IMG = "https://images.unsplash.com/photo-1593080358201-08e4ff5f93d9?w=1920&h=1080&fit=crop&crop=center&q=80";
+const HERO_IMG = "https://customer-assets.emergentagent.com/job_people-leadership/artifacts/ns4bgxbj_header.jpg";
 
 export default function HeroSection() {
   return (
@@ -18,7 +18,7 @@ export default function HeroSection() {
           className="w-full h-full object-cover"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0C0820]/92 via-[#0C0820]/75 to-[#0C0820]/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0C0820]/95 via-[#0C0820]/80 to-[#0C0820]/30" />
       </div>
 
       {/* Content */}
@@ -29,7 +29,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           >
-            <span className="inline-block text-violet-300/90 text-xs font-medium tracking-[0.25em] uppercase mb-8">
+            <span className="inline-block text-indigo-300/90 text-xs font-medium tracking-[0.25em] uppercase mb-8">
               Consulenza svizzera
             </span>
 
@@ -92,7 +92,7 @@ export default function HeroSection() {
           data-testid="human-aimpact-badge"
           className="bg-white/10 backdrop-blur-md border border-white/15 rounded-sm px-5 py-3"
         >
-          <p className="text-[10px] text-violet-300 tracking-[0.2em] uppercase mb-1">Programma</p>
+          <p className="text-[10px] text-indigo-300 tracking-[0.2em] uppercase mb-1">Programma</p>
           <p className="text-sm text-white font-medium">Human-AImpact</p>
           <p className="text-[11px] text-white/50 mt-0.5">People-first nell'era dell'AI</p>
         </div>
