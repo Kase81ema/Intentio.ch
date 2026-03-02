@@ -121,6 +121,9 @@ def send_user_confirmation(sub):
 
 @api_router.post("/contact")
 async def submit_contact(form: ContactFormInput, background_tasks: BackgroundTasks):
+    if not form.privacy_consent:
+        from fastapi import HTTPException
+        raise HTTPException(status_code=400, detail="Il consenso alla privacy è obbligatorio.")
     submission = ContactSubmission(**form.model_dump())
     doc = submission.model_dump()
     await db.contacts.insert_one(doc)
