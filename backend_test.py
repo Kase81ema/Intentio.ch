@@ -119,7 +119,7 @@ class IntentioAPITester:
             "Contact form without privacy consent",
             "POST", 
             "api/contact",
-            422,  # Expecting validation error
+            400,  # Expecting validation error (Italian message)
             data=data_no_consent
         )
 

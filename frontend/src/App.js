@@ -1,7 +1,6 @@
 import "@/App.css";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import TrustSection from "@/components/TrustSection";
 import ServicesSection from "@/components/ServicesSection";
 import SituationsSection from "@/components/SituationsSection";
 import ImpactSection from "@/components/ImpactSection";
@@ -15,7 +14,6 @@ function App() {
       <Header />
       <main>
         <HeroSection />
-        <TrustSection />
         <ServicesSection />
         <SituationsSection />
         <ImpactSection />
