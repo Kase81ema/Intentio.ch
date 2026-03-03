@@ -10,22 +10,28 @@ const steps = [
 
 const team = [
   {
-    initials: "AB",
-    name: "Nome Cognome",
-    role: "Founder & Managing Partner",
-    bio: "Oltre 15 anni di esperienza in consulenza organizzativa, coaching e sviluppo della leadership. Certificazioni ICF e EMCC.",
+    initials: "EC",
+    name: "Emanuele Casero",
+    role: "Founder, People & AI Team Coach",
+    bio: "Fondatore di Intentio Nova Sagl e progettista di Human-AImpact. Coach sistemico certificato ICF (PCC), formatore e consulente con background manageriale e imprenditoriale. Specializzato in leadership, complessità organizzativa e integrazione dell'AI come leva culturale e produttiva.",
   },
   {
-    initials: "CD",
-    name: "Nome Cognome",
-    role: "Senior Consultant & Coach",
-    bio: "Specializzazione in team coaching, dinamiche di gruppo e programmi di assessment per organizzazioni complesse.",
+    initials: "BM",
+    name: "Benedetta Magarini Montenero",
+    role: "Senior HR Consultant & PCC Coach",
+    bio: "Consulente e senior HR con esperienza in sviluppo organizzativo, change management e politiche people. Collega l'introduzione dell'AI a cultura aziendale, ruoli, responsabilità e sistemi di gestione.",
   },
   {
-    initials: "EF",
-    name: "Nome Cognome",
-    role: "Consultant & Trainer",
-    bio: "Focus su formazione esperienziale, comunicazione manageriale e facilitazione di processi di cambiamento.",
+    initials: "AC",
+    name: "Alessandro Castelli",
+    role: "HR Strategic Advisor",
+    bio: "HR Director e advisor con +20 anni di esperienza in aziende strutturate come Crédit Agricole. Membro del comitato direttivo di AIDP, collega l'introduzione dell'AI ai temi di cultura organizzativa, policy e people strategy.",
+  },
+  {
+    initials: "AT",
+    name: "Annapaola Tiscornia",
+    role: "AI Adoption & Training Specialist",
+    bio: "Professionista specializzata in AI generativa, analisi dei dati e architetture socio-tecniche. Traduce esigenze di business in casi d'uso concreti, valuta limiti e potenzialità degli strumenti e integra l'AI nei flussi di lavoro reali.",
   },
 ];
 
@@ -41,7 +47,7 @@ const logos = [
   { name: "HR Ticino", abbr: "HRT", img: "https://customer-assets.emergentagent.com/job_people-leadership/artifacts/fb6nnwas_logo-hrticino.png" },
   { name: "International Coaching Federation", abbr: "ICF", img: "https://customer-assets.emergentagent.com/job_people-leadership/artifacts/r3kqfkys_logo%20ICF.png" },
   { name: "European Mentoring & Coaching Council", abbr: "EMCC", img: "https://customer-assets.emergentagent.com/job_people-leadership/artifacts/2mkglfjz_emcc-global-1024x576.webp" },
-  { name: "Employer Branding Awards", abbr: "EBA", img: null },
+  { name: "Employer Branding Awards", abbr: "EBA", img: "https://customer-assets.emergentagent.com/job_people-leadership/artifacts/h2m6ohuf_Logo-EBA_Normale.svg" },
 ];
 
 export default function MethodSection() {
@@ -134,7 +140,7 @@ export default function MethodSection() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, i) => (
               <motion.div
                 key={i}
@@ -194,11 +200,8 @@ export default function MethodSection() {
               className="border border-slate-200/80 p-8 lg:p-10 hover:border-indigo-300/50 hover:shadow-lg transition-all duration-400"
               data-testid="partner-kitsap"
             >
-              <div className="flex items-center gap-4 mb-4">
-                <img src="https://customer-assets.emergentagent.com/job_people-leadership/artifacts/2iho6wo9_kitsap_black.svg" alt="Kitsap" className="h-8" />
-                <h3 className="text-2xl md:text-3xl font-bold text-slate-900" style={{ fontFamily: "'Playfair Display', serif" }}>
-                  Kitsap
-                </h3>
+              <div className="mb-6">
+                <img src="https://customer-assets.emergentagent.com/job_people-leadership/artifacts/2iho6wo9_kitsap_black.svg" alt="Kitsap" className="h-10" />
               </div>
               <p className="text-sm text-slate-500 leading-relaxed mb-6">
                 Valutazioni e percorsi basati sul modello FACED e possibilità di certificazioni People Loving Company®.
@@ -222,11 +225,8 @@ export default function MethodSection() {
               className="border border-slate-200/80 p-8 lg:p-10 hover:border-indigo-300/50 hover:shadow-lg transition-all duration-400"
               data-testid="partner-ariadne"
             >
-              <div className="flex items-center gap-4 mb-4">
-                <img src="https://customer-assets.emergentagent.com/job_people-leadership/artifacts/r23349yc_Ariadne_Logo_20grande_edited.avif" alt="Ariadne" className="h-8" />
-                <h3 className="text-2xl md:text-3xl font-bold text-slate-900" style={{ fontFamily: "'Playfair Display', serif" }}>
-                  Ariadne
-                </h3>
+              <div className="mb-6">
+                <img src="https://customer-assets.emergentagent.com/job_people-leadership/artifacts/r23349yc_Ariadne_Logo_20grande_edited.avif" alt="Ariadne" className="h-10" />
               </div>
               <p className="text-sm text-slate-500 leading-relaxed mb-6">
                 Percorsi strutturati di formazione per coach professionisti e programmi esperienziali per aziende,

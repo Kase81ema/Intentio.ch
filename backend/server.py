@@ -83,7 +83,7 @@ def send_brevo_email(to_email, to_name, subject, html_content):
 def send_admin_notification(sub):
     html = f"""
     <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;">
-    <h2 style="color:#6D28D9;border-bottom:2px solid #6D28D9;padding-bottom:8px;">Nuova richiesta di contatto</h2>
+    <h2 style="color:#4338CA;border-bottom:2px solid #4338CA;padding-bottom:8px;">Nuova richiesta di contatto</h2>
     <table style="width:100%;border-collapse:collapse;margin-top:16px;">
     <tr style="background:#f8fafc;"><td style="padding:10px 12px;font-weight:bold;width:160px;">Nome:</td><td style="padding:10px 12px;">{sub.nome}</td></tr>
     <tr><td style="padding:10px 12px;font-weight:bold;">Azienda:</td><td style="padding:10px 12px;">{sub.azienda}</td></tr>
@@ -103,7 +103,7 @@ def send_admin_notification(sub):
 def send_user_confirmation(sub):
     html = f"""
     <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;">
-    <h2 style="color:#6D28D9;">Grazie per averci contattato</h2>
+    <h2 style="color:#4338CA;">Grazie per averci contattato</h2>
     <p>Gentile {sub.nome},</p>
     <p>abbiamo ricevuto la sua richiesta e la ricontatteremo entro 1-2 giorni lavorativi con una proposta di primo passo concreto.</p>
     <div style="background:#f8fafc;padding:16px;border-radius:8px;margin:16px 0;">
@@ -119,6 +119,42 @@ def send_user_confirmation(sub):
     send_brevo_email(sub.email, sub.nome, "Abbiamo ricevuto la sua richiesta - Intentio Nova", html)
 
 
+def add_brevo_contact(sub):
+    """Add form submission as a contact in Brevo for audience collection"""
+    if not BREVO_API_KEY:
+        logging.warning("BREVO_API_KEY not set, skipping contact creation")
+        return
+    url = "https://api.brevo.com/v3/contacts"
+    headers = {
+        "accept": "application/json",
+        "content-type": "application/json",
+        "api-key": BREVO_API_KEY
+    }
+    name_parts = sub.nome.split(" ", 1)
+    payload = {
+        "email": sub.email,
+        "attributes": {
+            "FIRSTNAME": name_parts[0] if name_parts else sub.nome,
+            "LASTNAME": name_parts[1] if len(name_parts) > 1 else "",
+            "SMS": sub.telefono or "",
+            "COMPANY": sub.azienda,
+            "ROLE": sub.ruolo,
+            "AREA_INTERESSE": sub.area_interesse,
+            "OBIETTIVO": sub.obiettivo or "",
+            "TEMPISTICHE": sub.tempistiche,
+        },
+        "updateEnabled": True
+    }
+    try:
+        resp = http_requests.post(url, headers=headers, json=payload, timeout=30)
+        if resp.status_code in (200, 201, 204):
+            logging.info(f"Brevo contact created/updated: {sub.email}")
+        else:
+            logging.warning(f"Brevo contact response {resp.status_code}: {resp.text}")
+    except Exception as e:
+        logging.error(f"Failed to create Brevo contact: {e}")
+
+
 @api_router.post("/contact")
 async def submit_contact(form: ContactFormInput, background_tasks: BackgroundTasks):
     if not form.privacy_consent:
@@ -129,6 +165,7 @@ async def submit_contact(form: ContactFormInput, background_tasks: BackgroundTas
     await db.contacts.insert_one(doc)
     background_tasks.add_task(send_admin_notification, submission)
     background_tasks.add_task(send_user_confirmation, submission)
+    background_tasks.add_task(add_brevo_contact, submission)
     return {
         "status": "received",
         "message": "Richiesta ricevuta. La ricontatteremo entro 1-2 giorni lavorativi.",

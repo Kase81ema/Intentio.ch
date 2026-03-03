@@ -8,7 +8,7 @@ const services = [
     title: "Team Connection",
     lead: "Rendiamo più solide e misurabili le iniziative che impattano su attrazione, crescita e benessere delle persone nel team.",
     body: "Attraverso la progettazione strategica di iniziative di People management rigeneriamo relazioni sane e connessioni che accelerano la produttività.",
-    image: "https://images.unsplash.com/photo-1573167507387-6b4b98cb7c13?w=800&h=600&fit=crop&crop=center&q=80",
+    image: "https://customer-assets.emergentagent.com/job_people-leadership/artifacts/qefz87zc_team%20coaching%20ema.jpg",
     reverse: false,
   },
   {

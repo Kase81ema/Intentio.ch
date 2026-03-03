@@ -213,8 +213,8 @@ export default function ContactSection() {
             <div>
               <h4 className="text-[11px] font-medium tracking-[0.2em] uppercase text-slate-400 mb-5">Link</h4>
               <div className="space-y-2.5 text-sm text-slate-500">
-                <a href="https://www.intentionova.ch" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-indigo-400 transition-colors" data-testid="footer-site-link">
-                  intentionova.ch <ExternalLink className="h-3 w-3" />
+                <a href="https://www.human-aimpact.ch" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-indigo-400 transition-colors" data-testid="footer-site-link">
+                  human-aimpact.ch <ExternalLink className="h-3 w-3" />
                 </a>
                 <a href="/privacy" className="block hover:text-indigo-400 transition-colors">Privacy Policy</a>
                 <a href="/cookie" className="block hover:text-indigo-400 transition-colors">Cookie Policy</a>
