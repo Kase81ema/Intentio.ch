@@ -10,28 +10,22 @@ const steps = [
 
 const team = [
   {
-    initials: "EC",
     name: "Emanuele Casero",
     role: "Founder, People & AI Team Coach",
     bio: "Fondatore di Intentio Nova Sagl e progettista di Human-AImpact. Coach sistemico certificato ICF (PCC), formatore e consulente con background manageriale e imprenditoriale. Specializzato in leadership, complessità organizzativa e integrazione dell'AI come leva culturale e produttiva.",
+    photo: "https://customer-assets.emergentagent.com/job_people-leadership/artifacts/jzceyfwf_Emanuele%20Casero_1.png",
   },
   {
-    initials: "BM",
     name: "Benedetta Magarini Montenero",
     role: "Senior HR Consultant & PCC Coach",
     bio: "Consulente e senior HR con esperienza in sviluppo organizzativo, change management e politiche people. Collega l'introduzione dell'AI a cultura aziendale, ruoli, responsabilità e sistemi di gestione.",
+    photo: "https://customer-assets.emergentagent.com/job_people-leadership/artifacts/gjxkq1jr_Benedetta%20Magarini_2.png",
   },
   {
-    initials: "AC",
     name: "Alessandro Castelli",
     role: "HR Strategic Advisor",
     bio: "HR Director e advisor con +20 anni di esperienza in aziende strutturate come Crédit Agricole. Membro del comitato direttivo di AIDP, collega l'introduzione dell'AI ai temi di cultura organizzativa, policy e people strategy.",
-  },
-  {
-    initials: "AT",
-    name: "Annapaola Tiscornia",
-    role: "AI Adoption & Training Specialist",
-    bio: "Professionista specializzata in AI generativa, analisi dei dati e architetture socio-tecniche. Traduce esigenze di business in casi d'uso concreti, valuta limiti e potenzialità degli strumenti e integra l'AI nei flussi di lavoro reali.",
+    photo: "https://customer-assets.emergentagent.com/job_people-leadership/artifacts/5d2bphwb_Alessandro%20Castelli_2.png",
   },
 ];
 
@@ -140,7 +134,7 @@ export default function MethodSection() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {team.map((member, i) => (
               <motion.div
                 key={i}
@@ -151,13 +145,14 @@ export default function MethodSection() {
                 className="bg-white border border-slate-200/80 hover:border-indigo-300/50 hover:shadow-lg transition-all duration-400 group"
                 data-testid={`team-member-${i}`}
               >
-                {/* Photo placeholder */}
-                <div className="aspect-[4/3] bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center overflow-hidden">
-                  <div className="w-24 h-24 rounded-full bg-white/80 border-2 border-slate-300 flex items-center justify-center group-hover:border-indigo-400 transition-colors">
-                    <span className="text-2xl font-bold text-slate-400 group-hover:text-indigo-600 transition-colors">
-                      {member.initials}
-                    </span>
-                  </div>
+                {/* Photo */}
+                <div className="aspect-[4/3] bg-slate-100 overflow-hidden">
+                  <img
+                    src={member.photo}
+                    alt={member.name}
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                    loading="lazy"
+                  />
                 </div>
                 <div className="p-6 lg:p-8">
                   <h3 className="text-lg font-bold text-slate-900">{member.name}</h3>
