@@ -110,7 +110,7 @@
 }
 
 #sib-form-container {
-    max-width: 480px !important;
+    max-width: 560px !important;
 }
 
 #sib-container .sib-form-message-panel {
@@ -126,6 +126,32 @@
 .sib-sms-input-wrapper .entry__field select.input {
     height: 48px !important;
     border-radius: 0 !important;
+}
+
+.sib-sms-input-wrapper {
+    display: flex !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+}
+
+.sib-sms-input {
+    display: flex !important;
+    align-items: stretch !important;
+    width: 100% !important;
+}
+
+.sib-sms-input .entry__field:first-child {
+    flex-shrink: 0 !important;
+    width: auto !important;
+    min-width: 90px !important;
+}
+
+.sib-sms-input .entry__field:last-child {
+    flex: 1 !important;
+}
+
+.sib-sms-tooltip {
+    display: none !important;
 }
 
 #sib-container .input_display {

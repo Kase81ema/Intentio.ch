@@ -129,10 +129,10 @@ const BREVO_FORM_HTML = `
           </div>
         </div>
         <div style="padding: 8px 0;">
-          <div class="sib-multiselect sib-multiselect-multichoice sib-form--blockPosition sib-form-block" data-required="true">
+          <div class="sib-multiselect sib-multiselect-multichoice sib-form--blockPosition sib-form-block">
             <div class="form__entry">
               <div class="form__label-row">
-                <label class="entry__label" style="font-weight:500; text-align:left; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; font-family:Inter, sans-serif; color:#475569;" for="lists" data-required="*">Tempistiche *</label>
+                <label class="entry__label" style="font-weight:500; text-align:left; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; font-family:Inter, sans-serif; color:#475569;" for="lists">Tempistiche</label>
                 <div class="entry__field">
                   <div class="input input_display input--multiselect input--centerText" style="padding-right:">0 selezionati</div>
                   <input id="lists" class="input" name="TEMPISTICHE[]" type="hidden" value="[]" />
@@ -191,9 +191,10 @@ const BREVO_FORM_HTML = `
 
 function BrevoForm() {
   const containerRef = useRef(null);
+  const scriptLoaded = useRef(false);
 
   useEffect(() => {
-    // Load Brevo styles
+    // Load Brevo CSS
     if (!document.querySelector('link[href*="sibforms"]')) {
       const link = document.createElement("link");
       link.rel = "stylesheet";
@@ -201,7 +202,7 @@ function BrevoForm() {
       document.head.appendChild(link);
     }
 
-    // Set global Brevo config
+    // Set global config BEFORE script loads
     window.REQUIRED_CODE_ERROR_MESSAGE = "Scegli un prefisso paese";
     window.LOCALE = "it";
     window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE =
@@ -219,19 +220,20 @@ function BrevoForm() {
     };
     window.AUTOHIDE = Boolean(0);
 
-    // Load Brevo main script
-    const existingScript = document.querySelector('script[src*="sibforms"]');
-    if (existingScript) existingScript.remove();
+    // Delay script load to ensure DOM is fully rendered
+    const timer = setTimeout(() => {
+      if (scriptLoaded.current) return;
+      scriptLoaded.current = true;
 
-    const script = document.createElement("script");
-    script.src = "https://sibforms.com/forms/end-form/build/main.js";
-    script.defer = true;
-    document.body.appendChild(script);
+      const existing = document.querySelector('script[src*="sibforms"]');
+      if (existing) existing.remove();
 
-    return () => {
-      const s = document.querySelector('script[src*="sibforms"]');
-      if (s) s.remove();
-    };
+      const script = document.createElement("script");
+      script.src = "https://sibforms.com/forms/end-form/build/main.js";
+      document.body.appendChild(script);
+    }, 300);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
