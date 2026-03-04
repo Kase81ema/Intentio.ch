@@ -104,7 +104,7 @@ const BREVO_FORM_HTML = `
                       <input type="tel" class="input" id="SMS" name="SMS" autocomplete="off" placeholder="Numero di telefono" />
                     </div>
                   </div>
-                  <div class="sib-sms-tooltip">
+                  <div class="sib-sms-tooltip" style="display:none;">
                     <div class="sib-sms-tooltip__box">Il campo SMS deve contenere tra i 6 e i 19 caratteri e includere il prefisso del paese senza usare +/0</div>
                     <span class="sib-sms-tooltip__icon">?</span>
                   </div>
@@ -121,7 +121,7 @@ const BREVO_FORM_HTML = `
               <div class="form__label-row">
                 <label class="entry__label" style="font-weight:500; text-align:left; font-size:11px; letter-spacing:0.08em; text-transform:uppercase; font-family:Inter, sans-serif; color:#475569;" for="CONTACT_TIMEZONE">Obiettivo</label>
                 <div class="entry__field">
-                  <input class="input" maxlength="200" type="text" id="CONTACT_TIMEZONE" name="CONTACT_TIMEZONE" autocomplete="off" placeholder="Descrivi brevemente obiettivo e contesto..." />
+                  <input class="input" maxlength="200" type="text" id="CONTACT_TIMEZONE" name="CONTACT_TIMEZONE" autocomplete="off" placeholder="Descrivi brevemente obiettivo e contesto..." style="height:96px !important;" />
                 </div>
               </div>
               <label class="entry__error entry__error--primary" style="font-size:14px; text-align:left; font-family:Inter, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:0; border-color:#ff4949;"></label>
@@ -314,7 +314,7 @@ export default function ContactSection() {
         <div className="max-w-[1400px] mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
             <div className="md:col-span-2">
-              <img src={LOGO_DARK} alt="Intentio" className="h-12 mb-5" />
+              <img src={LOGO_DARK} alt="Intentio" className="h-20 mb-5" />
               <p className="text-sm text-slate-500 leading-relaxed max-w-sm">
                 Evoluzione consapevole di persone, leadership e team.
                 Società svizzera di consulenza organizzativa.

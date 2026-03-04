@@ -61,11 +61,11 @@
 
 #sib-container .entry__label {
     font-family: 'Inter', sans-serif !important;
-    font-size: 11px !important;
+    font-size: 12px !important;
     letter-spacing: 0.08em !important;
     text-transform: uppercase !important;
     color: #475569 !important;
-    font-weight: 500 !important;
+    font-weight: 600 !important;
     margin-bottom: 6px !important;
 }
 
@@ -110,7 +110,7 @@
 }
 
 #sib-form-container {
-    max-width: 100% !important;
+    max-width: 480px !important;
 }
 
 #sib-container .sib-form-message-panel {
